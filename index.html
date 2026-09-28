@@ -1,595 +1,885 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suncyb Infotech - Smart, Scalable, and Secure IT Solutions</title>
-    <style>
-        :root {
-            --primary: #0078D4;
-            --dark: #1E293B;
-            --light: #F8FAFC;
-            --accent: #0EA5E9;
-            --text: #334155;
-            --transition: all 0.3s ease;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <title>Suncyb Infotech</title>
+    <meta name="description" content="Suncyb ERP is a complete solution for Training Providers and Project Implementing Agencies working under Indian skill development schemes like PMKVY, DDU-GKY, NULM, and NSDC.">
+    <meta name="keywords" content="ERP for TP, ERP for PIA, skill development ERP, PMKVY software, DDU-GKY ERP, NSDC ERP, Suncyb ERP">
+    <meta name="description" content="Explore Suncyb ERP features including candidate registration, biometric attendance, training module, assessments, certifications, and placement tracking.">
+    <meta name="keywords" content="ERP features, training ERP modules, skill ERP features, biometric attendance software, assessment tracking, placement management ERP, TP ERP modules">
+    <meta name="google-site-verification" content="0U48Z0l2vA216fAhcIw4EgabdO7Hb5_dpj-7NsNRqL4" />
+  <!-- Favicons -->
+  <link href="images/img/favicon.png" rel="icon">
+  <link href="images/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        /* Header & Navigation */
-        header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-placeholder {
-            width: 45px;
-            height: 45px;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 120, 212, 0.2);
-        }
-
-        .brand-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .brand-name span {
-            color: var(--primary);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-
-        .nav-btn {
-            background: var(--primary);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 120, 212, 0.15);
-        }
-
-        .nav-btn:hover {
-            background: #005a9e;
-            transform: translateY(-2px);
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--dark);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 10rem 2rem 6rem;
-            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero h1 span {
-            color: var(--primary);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            color: #64748B;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 120, 212, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: #005a9e;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0, 120, 212, 0.05);
-            transform: translateY(-2px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--dark);
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-            transition: var(--transition);
-            border: 1px solid #E2E8F0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            border-color: var(--primary);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        /* About Section */
-        .about {
-            background: white;
-            padding: 6rem 2rem;
-        }
-
-        .about-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.2rem;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: #64748B;
-        }
-
-        .about-image-placeholder {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-            height: 350px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--dark);
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #CBD5E1;
-            border-radius: 5px;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 1rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .submit-btn:hover {
-            background: #005a9e;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: #94A3B8;
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo h3 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links h4 {
-            color: white;
-            margin-bottom: 1.2rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #94A3B8;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #334155;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 968px) {
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                padding: 2rem;
-                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-                gap: 1.5rem;
-                text-align: center;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            .cta-group {
-                flex-direction: column;
-            }
-            
-            .contact-form {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+  <!-- Vendor CSS Files -->
+  <link href="images/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="images/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="images/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="images/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="images/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="images/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="images/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="~/lib/alertifyjs/css/themes/default.min.css" />
+    <link rel="stylesheet" href="~/lib/alertifyjs/css/themes/semantic.min.css" />
+    <link href="~/lib/alertifyjs/css/themes/bootstrap.css" rel="stylesheet" />
+  <!-- Template Main CSS File -->
+  <link href="images/css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="nav-container">
-            <a href="#" class="logo-area">
-                <!-- Replace with logo snippet image if necessary -->
-                <div class="logo-placeholder">S</div>
-                <div class="brand-name">Suncyb <span>Infotech</span></div>
-            </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact" class="nav-btn">Get in Touch</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Building <span>Smart, Scalable, & Secure</span> Digital Solutions</h1>
-            <p>We transform your business ideas into reality through state-of-the-art software engineering, responsive web platforms, and forward-thinking digital infrastructures.</p>
-            <div class="cta-group">
-                <a href="#services" class="btn btn-primary">Explore Services</a>
-                <a href="#contact" class="btn btn-secondary">Discuss a Project</a>
-            </div>
-        </div>
-    </section>
+            <h1 class="logo me-auto"><a href=~/Home/Welcome><img src="Images/Full_logo.png" alt="Logo" loading="lazy" /> </a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🌐</div>
-                <h3>Web Development</h3>
-                <p>[Placeholder for web development content. You can write your specific technologies, frameworks, and web architectures here.]</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>Mobile Apps</h3>
-                <p>[Placeholder for mobile app engineering. Describe your iOS, Android, cross-platform app design details here.]</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🔒</div>
-                <h3>Cyber Security</h3>
-                <p>[Placeholder for infrastructure security. Detail your approach to vulnerability assessments, firewalls, and data threat mitigation.]</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-text">
-                <h2>Who We Are</h2>
-                <p>[Placeholder about Suncyb Infotech's corporate history. Update this block with your mission statement, engineering culture, team history, and operational milestones.]</p>
-                <p>[Additional block to outline your unique value proposition, technical certifications, and client-centric core philosophies.]</p>
-            </div>
-            <div class="about-image-placeholder">
-                [Company Image / Graphic Placeholder]
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Contact Us</h2>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submitted! (Demo only)');">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" required placeholder="Enter your full name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" required placeholder="name@company.com">
-            </div>
-            <div class="form-group">
-                <label for="message">Project Description</label>
-                <textarea id="message" rows="5" required placeholder="Tell us about your digital requirements..."></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <h3>Suncyb Infotech</h3>
-                <p>Driving technological innovation with security and scale at the core.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
+            <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <!-- <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li> -->
+                    <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
+                    <!-- <ul> -->
+                    <!-- <li><a href="#">Drop Down 1</a></li> -->
+                    <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a> -->
+                    <!-- <ul> -->
+                    <!-- <li><a href="#">Deep Drop Down 1</a></li> -->
+                    <!-- <li><a href="#">Deep Drop Down 2</a></li> -->
+                    <!-- <li><a href="#">Deep Drop Down 3</a></li> -->
+                    <!-- <li><a href="#">Deep Drop Down 4</a></li> -->
+                    <!-- <li><a href="#">Deep Drop Down 5</a></li> -->
+                    <!-- </ul> -->
+                    <!-- </li> -->
+                    <!-- <li><a href="#">Drop Down 2</a></li> -->
+                    <!-- <li><a href="#">Drop Down 3</a></li> -->
+                    <!-- <li><a href="#">Drop Down 4</a></li> -->
+                    <!-- </ul> -->
+                    <!-- </li> -->
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <!-- <li><a class="getstarted scrollto" href="~/Account/Login">Login</a></li> -->
                 </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <h1>Efficient Time Tracking Solutions for Campus Activities</h1>
+                    <h2><i>Empower Your Campus: Track Time, Maximize Productivity!</i></h2>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                        <!-- @*<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>*@ -->
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/img/hero-img.png" class="img-fluid animated" loading="lazy" alt="Tracking Image">
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Suncyb Infotech. All rights reserved.</p>
+
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients section-bg">
+            <div class="container">
+
+                <div class="row" data-aos="zoom-in">
+
+                    <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> -->
+                        <!-- <img src="images/img/clients/client-1.png" class="img-fluid" alt="" title="St. Franci's High School, Mirganj"> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> -->
+                        <!-- <img src="images/img/clients/client-2.png" class="img-fluid" alt=""> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> -->
+                        <!-- <img src="images/img/clients/client-3.png" class="img-fluid" alt=""> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> -->
+                        <!-- <img src="images/img/clients/client-4.png" class="img-fluid" alt=""> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> -->
+                        <!-- <img src="images/img/clients/client-5.png" class="img-fluid" alt=""> -->
+                    <!-- </div>  -->
+
+                    <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> -->
+                        <!-- <img src="images/img/clients/client-6.png" class="img-fluid" alt=""> -->
+                    <!-- </div> -->
+
+                </div>
+
+            </div>
+        </section><!-- End Cliens Section -->
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>About Us</h2>
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <p style="text-align:justify">
+                            At <b>Suncyb Infotech,</b> we are a forward-thinking IT company dedicated to delivering innovative, reliable, and customized technology solutions. With a strong focus on quality and client satisfaction, we specialize in developing <b>ERP systems, web applications, and enterprise software</b> that drive digital transformation and operational efficiency.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p style="text-align:justify">
+                            Our expertise spans across multiple industries, with a special emphasis on <b>government skilling initiatives.</b> Our flagship product, a powerful <b>Skilling ERP platform,</b> is exclusively designed to support training centers and institutions involved in <b>national and state-level vocational training programs.</b>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Us Section -->
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us section-bg">
+            <div class="container-fluid" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                        <div class="content">
+                            <h3><strong>ERP is Only for Government Skilling</strong></h3>
+                            <p>
+                                At Suncyb Infotech, we are fully dedicated to supporting India’s mission of skill development through government-backed initiatives. Our ERP solution is <b>exclusively built for government skilling programs,</b> designed to meet the unique operational, reporting, and compliance needs of training centers and institutions working under national and state-level schemes.
+                            </p>
+                            <ul>
+                                <b>Key Focus Areas:</b>
+                                <li>Programs like <b>PMKVY, DDU-GKY, NSDC, NULM,</b> and various <b>state skilling missions</b></li>
+                                <li>Streamlined processes for <b>trainee registration, batch formation, trainer assignment, and attendance tracking</b></li>
+                                <li>Automated <b>assessment, certification, and placement tracking</b></li>
+                                <li><b>Real-time reporting and compliance</b> tools aligned with government guidelines</li>
+                                <li>Ensuring <b>transparency, accountability, and operational efficiency</b> in every step of the training cycle</li>
+                            </ul>
+                            <p>
+                                By focusing solely on the government skilling ecosystem, our ERP delivers <b>targeted, reliable,and compliant solutions</b> that help institutions stay aligned with scheme-specific requirements and contribute
+                                to India’s vision of a <b>Skilled, Empowered Nation.</b>
+                            </p>
+                        </div>
+
+                        <!-- @* <div class="accordion-list"> -->
+                            <!-- <ul> -->
+                                <!-- <li> -->
+                                    <!-- <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Centralized Database <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> -->
+                                    <!-- <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list"> -->
+                                        <!-- <p> -->
+                                            <!-- The centralized management of institutional data empowers individua users to efficiently handle their respective activities within a unified platform -->
+                                        <!-- </p> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+
+                                <!-- <li> -->
+                                    <!-- <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"> -->
+                                        <!-- <span>02</span> Dashboards & Reports<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i> -->
+                                    <!-- </a> -->
+                                    <!-- <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list"> -->
+                                        <!-- <p> -->
+                                            <!-- Our analytics-driven dashboards provide access to actionable real time information and enable report generation for informed decision making and compliance. -->
+
+                                        <!-- </p> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+
+                                <!-- <li> -->
+                                    <!-- <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"> -->
+                                        <!-- <span>03</span> Quickest ROI -->
+                                        <!-- <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i> -->
+                                    <!-- </a> -->
+                                    <!-- <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list"> -->
+                                        <!-- <p> -->
+                                            <!-- Experience rapid implementation with streamlined processes and a cutting-edge technology solution, ensuring the quickest return on investment (ROI) for your organization. -->
+
+                                        <!-- </p> -->
+                                    <!-- </div> -->
+                                <!-- </li> -->
+
+                            <!-- </ul> -->
+                        <!-- </div> *@ -->
+
+                    </div>
+
+                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("images/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+                </div>
+
+            </div>
+        </section><!-- End Why Us Section -->
+        <!-- ======= Skills Section ======= -->
+        <section id="skills" class="skills">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row content">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="images/img/skills.png" class="img-fluid" loading="lazy" alt="About Image">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                        <h3>About Portal</h3>
+                        <p style="text-align:justify">
+                            At <b>Suncyb Infotech,</b> we specialize in delivering advanced <b>Skilling ERP solutions</b> designed to support a wide range of government schemes and initiatives in vocational training and skill development.
+                        </p>
+                        <p style="text-align:justify">
+                            Our ERP system is built to manage and streamline operations for <b>training centers, institutes, and organizations</b> participating in flagship programs like <b>PMKVY, DDU-GKY, NSDC, NULM, and other state-level skilling missions.</b>
+                        </p>
+                        <p style="text-align:justify">
+                            Our platform offers <b>end-to-end functionality</b> for trainee enrollment, batch scheduling, trainer management, attendance tracking, assessment, certification, and placement tracking. With an intuitive interface and scalable structure, we empower skilling institutions to enhance <b>transparency, accountability, and efficiency </b>at every stage of the training lifecycle.
+                        </p>
+                        <p style="text-align:justify">
+                            <b>Partner with suncyb.in to digitize your skilling operations and contribute to building a Skilled and Empowered India.</b>
+                        </p>
+
+                        <!-- @* <div class="skills-content"> -->
+
+                            <!-- <div class="progress"> -->
+                                <!-- <span class="skill">HTML <i class="val">100%</i></span> -->
+                                <!-- <div class="progress-bar-wrap"> -->
+                                    <!-- <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="progress"> -->
+                                <!-- <span class="skill">CSS <i class="val">90%</i></span> -->
+                                <!-- <div class="progress-bar-wrap"> -->
+                                    <!-- <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="progress"> -->
+                                <!-- <span class="skill">JavaScript <i class="val">75%</i></span> -->
+                                <!-- <div class="progress-bar-wrap"> -->
+                                    <!-- <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="progress"> -->
+                                <!-- <span class="skill">Photoshop <i class="val">55%</i></span> -->
+                                <!-- <div class="progress-bar-wrap"> -->
+                                    <!-- <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+
+                        <!-- </div> *@ -->
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Skills Section -->
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>
+                        Our Features
+                    </h2>
+                   <!-- @* <p></p> *@ -->
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4>
+                                <a href="">
+                                    Access Management
+                                </a>
+                            </h4>
+                            <p>Manage group rules for admins to create and manage users and their access modules based on profiles and geographical permissions.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4>
+                                <a href="">
+                                    Project Management
+                                </a>
+                            </h4>
+                            <p>Manage project initiation, update timelines, and maintain project-specific documentation.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4>
+                                <a href="">
+                                    Centre Management
+                                </a>
+                            </h4>
+                            <p>
+                                Manage training center information, generate facility failure reports, and track ongoing programs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-layer"></i></div>
+                            <h4>
+                                <a href="">
+                                    Candidate Management
+                                </a>
+                            </h4>
+                            <p>
+                                Manage candidate applications, registrations, and selections.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding:10px 0 0 0">
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-layer"></i></div>
+                            <h4>
+                                <a href="">
+                                    Batch Management
+                                </a>
+                            </h4>
+                            <p>
+                                Create and manage batches, including closures and transfers in emergencies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-layer"></i></div>
+                            <h4>
+                                <a href="">
+                                    Training Management
+                                </a>
+                            </h4>
+                            <p>
+                                Oversee training sessions, monitor candidate enrollment, and manage attendance till batch closure.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-layer"></i></div>
+                            <h4>
+                                <a href="">
+                                    Placement Management
+                                </a>
+                            </h4>
+                            <p>
+                                Handle candidate placements, manage employer details, and track post-placement information.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-start">
+                        <h3>Call To Action</h3>
+                        <p>Take the next step in transforming your skilling operations. Reach out to us today for a free demo!</p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#contact">Call To Action</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Cta Section -->
+        <!-- ======= Portfolio Section ======= -->
+        <!-- <section id="portfolio" class="portfolio"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Portfolio</h2> -->
+        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        <!-- </div> -->
+        <!-- <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100"> -->
+        <!-- <li data-filter="*" class="filter-active">All</li> -->
+        <!-- <li data-filter=".filter-app">App</li> -->
+        <!-- <li data-filter=".filter-card">Card</li> -->
+        <!-- <li data-filter=".filter-web">Web</li> -->
+        <!-- </ul> -->
+        <!-- <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200"> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>App 1</h4> -->
+        <!-- <p>App</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>Web 3</h4> -->
+        <!-- <p>Web</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>App 2</h4> -->
+        <!-- <p>App</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>Card 2</h4> -->
+        <!-- <p>Card</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>Web 2</h4> -->
+        <!-- <p>Web</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>App 3</h4> -->
+        <!-- <p>App</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>Card 1</h4> -->
+        <!-- <p>Card</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>Card 3</h4> -->
+        <!-- <p>Card</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web"> -->
+        <!-- <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="portfolio-info"> -->
+        <!-- <h4>Web 3</h4> -->
+        <!-- <p>Web</p> -->
+        <!-- <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a> -->
+        <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </section>-->
+        <!-- End Portfolio Section -->
+        <!-- ======= Team Section ======= -->
+        <!-- <section id="team" class="team section-bg"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Team</h2> -->
+        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+        <!-- <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100"> -->
+        <!-- <div class="member d-flex align-items-start"> -->
+        <!-- <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="member-info"> -->
+        <!-- <h4>Walter White</h4> -->
+        <!-- <span>Chief Executive Officer</span> -->
+        <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="ri-twitter-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-facebook-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+        <!-- <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200"> -->
+        <!-- <div class="member d-flex align-items-start"> -->
+        <!-- <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="member-info"> -->
+        <!-- <h4>Sarah Jhonson</h4> -->
+        <!-- <span>Product Manager</span> -->
+        <!-- <p>Aut maiores voluptates amet et quis praesentium qui senda para</p> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="ri-twitter-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-facebook-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+        <!-- <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300"> -->
+        <!-- <div class="member d-flex align-items-start"> -->
+        <!-- <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="member-info"> -->
+        <!-- <h4>William Anderson</h4> -->
+        <!-- <span>CTO</span> -->
+        <!-- <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="ri-twitter-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-facebook-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+        <!-- <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400"> -->
+        <!-- <div class="member d-flex align-items-start"> -->
+        <!-- <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div> -->
+        <!-- <div class="member-info"> -->
+        <!-- <h4>Amanda Jepson</h4> -->
+        <!-- <span>Accountant</span> -->
+        <!-- <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p> -->
+        <!-- <div class="social"> -->
+        <!-- <a href=""><i class="ri-twitter-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-facebook-fill"></i></a> -->
+        <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+        <!-- <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </section>-->
+        <!-- End Team Section -->
+        <!-- ======= Pricing Section ======= -->
+        <!-- <section id="pricing" class="pricing"> -->
+        <!-- <div class="container" data-aos="fade-up"> -->
+        <!-- <div class="section-title"> -->
+        <!-- <h2>Pricing</h2> -->
+        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+        <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100"> -->
+        <!-- <div class="box"> -->
+        <!-- <h3>Free Plan</h3> -->
+        <!-- <h4><sup>$</sup>0<span>per month</span></h4> -->
+        <!-- <ul> -->
+        <!-- <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li> -->
+        <!-- <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li> -->
+        <!-- <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li> -->
+        <!-- <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li> -->
+        <!-- <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li> -->
+        <!-- </ul> -->
+        <!-- <a href="#" class="buy-btn">Get Started</a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200"> -->
+        <!-- <div class="box featured"> -->
+        <!-- <h3>Business Plan</h3> -->
+        <!-- <h4><sup>$</sup>29<span>per month</span></h4> -->
+        <!-- <ul> -->
+        <!-- <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li> -->
+        <!-- <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li> -->
+        <!-- <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li> -->
+        <!-- <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li> -->
+        <!-- <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li> -->
+        <!-- </ul> -->
+        <!-- <a href="#" class="buy-btn">Get Started</a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300"> -->
+        <!-- <div class="box"> -->
+        <!-- <h3>Developer Plan</h3> -->
+        <!-- <h4><sup>$</sup>49<span>per month</span></h4> -->
+        <!-- <ul> -->
+        <!-- <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li> -->
+        <!-- <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li> -->
+        <!-- <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li> -->
+        <!-- <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li> -->
+        <!-- <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li> -->
+        <!-- </ul> -->
+        <!-- <a href="#" class="buy-btn">Get Started</a> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </section> -->
+        <!-- End Pricing Section -->
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <!-- @* <section id="faq" class="faq section-bg"> -->
+            <!-- <div class="container" data-aos="fade-up"> -->
+
+                <!-- <div class="section-title"> -->
+                    <!-- <h2>Frequently Asked Questions</h2> -->
+                    <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+                <!-- </div> -->
+
+                <!-- <div class="faq-list"> -->
+                    <!-- <ul> -->
+                        <!-- <li data-aos="fade-up" data-aos-delay="100"> -->
+                            <!-- <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> -->
+                            <!-- <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list"> -->
+                                <!-- <p> -->
+                                    <!-- Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </li> -->
+
+                        <!-- <li data-aos="fade-up" data-aos-delay="200"> -->
+                            <!-- <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> -->
+                            <!-- <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list"> -->
+                                <!-- <p> -->
+                                    <!-- Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui. -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </li> -->
+
+                        <!-- <li data-aos="fade-up" data-aos-delay="300"> -->
+                            <!-- <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> -->
+                            <!-- <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list"> -->
+                                <!-- <p> -->
+                                    <!-- Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </li> -->
+
+                        <!-- <li data-aos="fade-up" data-aos-delay="400"> -->
+                            <!-- <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> -->
+                            <!-- <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list"> -->
+                                <!-- <p> -->
+                                    <!-- Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in. -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </li> -->
+
+                        <!-- <li data-aos="fade-up" data-aos-delay="500"> -->
+                            <!-- <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> -->
+                            <!-- <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list"> -->
+                                <!-- <p> -->
+                                    <!-- Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. -->
+                                <!-- </p> -->
+                            <!-- </div> -->
+                        <!-- </li> -->
+
+                    <!-- </ul> -->
+                <!-- </div> -->
+
+            <!-- </div> -->
+        <!-- </section> *@ -->
+        <!-- End Frequently Asked Questions Section -->
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                  <!-- @*   <p></p> *@ -->
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-5 d-flex align-items-stretch">
+                        <div class="info">
+                            <!-- @* <div class="address"> -->
+                                <!-- <i class="bi bi-geo-alt"></i> -->
+                                <!-- <h4>Location:</h4> -->
+                                <!-- <p>D-5, Logix Infotech Park, Sector 59, Noida U.P-201301</p> -->
+                            <!-- </div> *@ -->
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>suncybinfo@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+91 9582101727</p>
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.4943870978644!2d77.3728002!3d28.6207402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce54255f337a1%3A0x31333f67b8dc9b6e!2sLogix%20Infotech%20Park!5e0!3m2!1sen!2sin!4v1717773146782!5m2!1sen!2sin"
+                                    width="470"
+                                    height="450"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                        <div class="php-email-form">
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="name">Your Name<span style="color:red">*</span></label>
+                                    <input type="text" name="name" class="form-control" id="txtname" autocomplete="off" required placeholder="Full Name">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="name">Your Email<span style="color:red">*</span></label>
+                                    <input type="email" class="form-control" name="email" id="txtemail" autocomplete="off" required placeholder="email Id.">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="name">Mobile No.<span style="color:red">*</span></label>
+                                    <input type="email" class="form-control" name="email" id="txtmobile" autocomplete="off" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57" required placeholder="+91XXXXXXXXXX" maxlength="10">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Subject<span style="color:red">*</span></label>
+                                <input type="text" class="form-control" name="subject" id="txtsubject" autocomplete="off" required placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Message<span style="color:red">*</span></label>
+                                <textarea class="form-control" name="message" rows="10" id="txtmessage" autocomplete="off" required placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="text-center"><button type="submit" id="btnsubmitquery">Send Message</button></div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Stay updated on the latest in government skilling and ERP solutions. Subscribe now!</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
 
-    <!-- Responsive Navigation Script -->
-    <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navMenu = document.querySelector('.nav-menu');
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
 
-        mobileMenu.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            
-            // Toggle hamburger animation style
-            const spans = mobileMenu.querySelectorAll('span');
-            spans.forEach((span, index) => {
-                if (navMenu.classList.contains('active')) {
-                    if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                    if (index === 1) span.style.opacity = '0';
-                    if (index === 2) span.style.transform = 'rotate(-45deg) translate(6px, -6px)';
-                } else {
-                    span.style.transform = 'none';
-                    span.style.opacity = '1';
-                }
-            });
-        });
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <img src="Images/Full_logo.png" alt="Logo"loading="lazy" style="width: 140px;background-color: #37517E;padding: 5px 5px 5px 5px;border-radius: 5px;" />
+                        <p>
+                           <!-- @*  D-5, Logix Infotech Park, <br> -->
+                            <!-- Sector 59, Noida<br> -->
+                            <!-- UP-201301 <br><br> *@ -->
+                            <strong>Phone:</strong> +91 9582101727<br>
+                            <strong>Email:</strong> info@suncyb.in / suncybinfo@gmail.com<br>
+                        </p>
+                    </div>
 
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenu.querySelectorAll('span').forEach(span => {
-                    span.style.transform = 'none';
-                    span.style.opacity = '1';
-                });
-            });
-        });
-    </script>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services ">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="termandcondition.html">Terms and Condition</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="privatepolicy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Social Networks</h4>
+                        <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                        <div class="social-links mt-3">
+                            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+                            <a href="https://www.facebook.com/suncybindia/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+                            <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+                            <a href="https://www.linkedin.com/company/suncyb-infotech/home/?viewAsMember=true" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                &copy; Copyright <strong><span>SUNCYB</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+                Designed by <a href="https://suncyb.com/">Suncyb Infotech</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="images/vendor/aos/aos.js"></script>
+    <script src="images/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="images/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="images/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="images/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="images/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="images/vendor/php-email-form/validate.js"></script>
+    <script src="~/lib/alertifyjs/alertify.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="images/js/main.js"></script>
+    
 </body>
 </html>
